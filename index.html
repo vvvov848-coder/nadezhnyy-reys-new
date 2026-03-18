@@ -47,7 +47,17 @@ nav h1 {
     color:orange;
     font-size:22px;
 }
-
+.float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #229ED9;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 22px;
+    text-decoration: none;
+}
 nav a {
     color:white;
     text-decoration:none;
@@ -93,9 +103,11 @@ nav a {
 .btn:hover {
     transform: translateY(-6px) scale(1.03);
     box-shadow: 0 12px 25px rgba(255,165,0,0.4);
+    background: #ffb84d;
 }
 
-
+linear-gradient(135deg, rgba(0,0,0,0.8), rgba(0,0,0,0.4)),
+url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d') center/cover;
 /* SECTION */
 .section {
     padding:80px 20px;
@@ -120,7 +132,18 @@ nav a {
     border-radius:12px;
     width:250px;
 }
+.section {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fade 0.8s forwards;
+}
 
+@keyframes fade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 /* GALLERY */
 .gallery {
     display:flex;
@@ -133,8 +156,11 @@ nav a {
 .gallery img {
     width:300px;
     border-radius:10px;
+    transition: 0.3s;
 }
-
+.gallery img:hover {
+    transform: scale(1.07);
+}
 /* CONTACT */
 .contact a {
     display:inline-block;
@@ -263,6 +289,6 @@ nav {
 <footer>
 © 2026 Надежный рейс
 </footer>
-
+<a href="https://t.me/managerrdp" class="float">💬</a>
 </body>
 </html>
