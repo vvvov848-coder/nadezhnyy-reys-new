@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Надежный рейс</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* Плавный скролл */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background:#0f172a;
+    color:white;
+}
+
+/* HEADER */
+header {
+    position:fixed;
+    width:100%;
+    top:0;
+    background:rgba(0,0,0,0.85);
+    padding:15px 20px;
+    z-index:1000;
+}
+
+nav {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+nav h1 {
+    color:orange;
+    font-size:22px;
+}
+
+nav a {
+    color:white;
+    text-decoration:none;
+    margin-left:15px;
+    font-size:14px;
+}
+
+/* HERO */
+.hero {
+    height:100vh;
+    padding-top:80px;
+    background:
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d') center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero h2 {
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.hero p {
+    font-size:18px;
+}
+
+.btn {
+    display:inline-block;
+    margin-top:20px;
+    padding:15px 25px;
+    background:orange;
+    border-radius:10px;
+    text-decoration:none;
+    color:black;
+    font-weight:bold;
+}
+
+/* SECTION */
+.section {
+    padding:80px 20px;
+    text-align:center;
+}
+
+.section h2 {
+    margin-bottom:30px;
+}
+
+/* CARDS */
+.cards {
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.card {
+    background:#1e293b;
+    padding:20px;
+    border-radius:12px;
+    width:250px;
+}
+
+/* GALLERY */
+.gallery {
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:30px;
+}
+
+.gallery img {
+    width:300px;
+    border-radius:10px;
+}
+
+/* CONTACT */
+.contact a {
+    display:inline-block;
+    margin:10px;
+    padding:12px 20px;
+    border-radius:8px;
+    text-decoration:none;
+    color:white;
+}
+
+.call { background:#ef4444; }
+.tg { background:#229ED9; }
+.viber { background:#7360f2; }
+
+/* MAP */
+.map iframe {
+    width:100%;
+    height:350px;
+    border:none;
+}
+
+/* FOOTER */
+footer {
+    background:black;
+    padding:20px;
+    text-align:center;
+}
+
+/* 📱 АДАПТАЦИЯ */
+@media (max-width:768px){
+
+.hero h2 {
+    font-size:26px;
+}
+
+.hero p {
+    font-size:14px;
+}
+
+nav {
+    flex-direction:column;
+    gap:10px;
+}
+
+.cards {
+    flex-direction:column;
+    align-items:center;
+}
+
+.gallery img {
+    width:90%;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<h1> Надежный рейс</h1>
+<div>
+<a href="#services">Услуги</a>
+<a href="#gallery">Фото</a>
+<a href="#contact">Контакты</a>
+</div>
+</nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+<div>
+<h2>Профессиональные грузчики в Днепре</h2>
+<p>Работаем по всему городу • Быстро • Аккуратно</p>
+<a href="#contact" class="btn">Заказать</a>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+<h2>Наши услуги</h2>
+
+<div class="cards">
+<div class="card">📦 Грузчики<br><br>Перенос мебели и техники</div>
+<div class="card">🚛 Переезды<br><br>Квартиры и офисы</div>
+<div class="card">🚚 Машина<br><br>Своя грузовая машина</div>
+</div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="section">
+<h2>Наши работы</h2>
+
+<div class="gallery">
+<img src="img1.jpg">
+<img src="img2.jpg">
+</div>
+</section>
+
+<!-- MAP -->
+<section class="section map">
+<h2>Работаем по всему Днепру</h2>
+<iframe src="https://www.google.com/maps?q=Днепр&output=embed"></iframe>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section contact">
+<h2>Связаться с нами</h2>
+
+<p>📞 +380933102110</p>
+<p>👤 Строкольцев Илья</p>
+
+<a class="call" href="tel:+380933102110">Позвонить</a>
+<a class="tg" href="https://t.me/managerrdp">Telegram</a>
+<a class="viber" href="viber://chat?number=+380933102110">Viber</a>
+
+</section>
+
+<footer>
+© 2026 Надежный рейс
+</footer>
+
+</body>
+</html>
